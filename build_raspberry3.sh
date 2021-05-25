@@ -11,6 +11,9 @@ make
 cd deps/pthreadpool
 PTHREAD_LIB=$(pwd)
 cd ../../../..
+sudo cp NNPACK/include/nnpack.h /usr/include/
+sudo cp NNPACK/deps/pthreadpool/include/pthreadpool.h /usr/include
+sudo cp NNPACK/build/libnnpack.a /usr/lib
 echo $PTHREAD_LIB
 make PTHREAD_LIB?=$PTHREAD_LIB
 wget https://pjreddie.com/media/files/yolov3-tiny.weights
